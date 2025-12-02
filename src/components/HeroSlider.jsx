@@ -2,6 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,45 +12,88 @@ import "animate.css";
 
 const heroSlides = [
   {
-    id: 1,
-    image:
-      "https://i.ibb.co.com/7Nj39LZr/charley-chau-snuggle-dog-bed-velour-teal-for-tunnelbeds-co-uk-04.webp",
-    title: "Snuggle Season for Pets",
-    subtitle: "Adorable winter sweaters to keep tails wagging and paws warm.",
-    buttonText: "Explore Collection",
-    buttonLink: "#",
+    serviceId: 1,
+    serviceName: "Winter Coat Fitting for Dogs",
+    providerName: "PawCare Studio",
+    providerEmail: "info@pawcare.com",
+    price: 25,
+    rating: 4.9,
+    slotsAvailable: 4,
+    description:
+      "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    image: "https://i.ibb.co.com/G4ZKbstd/unnamed.jpg",
+    category: "Clothing",
   },
   {
-    id: 2,
-    image: "https://i.ibb.co.com/Z1FfFDPR/pexels-miami302-31184827.jpg",
-    title: "Cozy Companions",
-    subtitle: "Wrap your furry friend in comfort with our soft winter outfits.",
-    buttonText: "Shop Cozy Fits",
-    buttonLink: "#",
+    serviceId: 2,
+    serviceName: "Winter Grooming & Paw Treatment",
+    providerName: "CozyPets Grooming",
+    providerEmail: "hello@cozypets.com",
+    price: 30,
+    rating: 4.8,
+    slotsAvailable: 3,
+    description:
+      "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    image: "https://i.ibb.co.com/Nnxb80Xv/unnamed.jpg",
+    category: "Grooming",
   },
   {
-    id: 3,
-    image:
-      "https://i.ibb.co.com/d4vkR2tj/shutterstock-1916060788-scaled-e1685040118261.webp",
-    title: "Warm Hearts, Warmer Coats",
-    subtitle: "Stylish and snug winter gear for every pet’s personality.",
-    buttonText: "View Styles",
-    buttonLink: "#",
+    serviceId: 3,
+    serviceName: "Pet Heated Bed Rental",
+    providerName: "WarmPaws Care",
+    providerEmail: "support@warmpaws.com",
+    price: 15,
+    rating: 4.7,
+    slotsAvailable: 10,
+    description:
+      "Keep your pets cozy with heated beds during chilly nights. Rent for daily or weekly use.",
+    image: "https://i.ibb.co.com/nMXTkCkv/unnamed.jpg",
+    category: "Comfort",
   },
   {
-    id: 4,
-    image:
-      "https://thumbs.dreamstime.com/z/english-cocker-spaniel-puppy-cuddles-gray-kitten-under-warm-white-blanket-bed-pets-sleep-home-red-heart-head-friends-embrace-385586884.jpg?ct=jpeg",
-    title: "Frosty Fun Awaits",
-    subtitle: "Cozy scarves and paw protection for playful winter days.",
-    buttonText: "Get Ready",
-    buttonLink: "#",
+    serviceId: 4,
+    serviceName: "Winter Vitamin & Nutrition Package",
+    providerName: "HealthyPet Clinic",
+    providerEmail: "contact@healthypet.com",
+    price: 40,
+    rating: 4.9,
+    slotsAvailable: 5,
+    description:
+      "Tailored winter diet plans and vitamin supplements to boost immunity and energy in cold weather.",
+    image: "https://i.ibb.co.com/Cpnmmyhs/unnamed.jpg",
+    category: "Nutrition",
+  },
+  {
+    serviceId: 5,
+    serviceName: "Indoor Play & Exercise Session",
+    providerName: "HappyPaws Indoor Park",
+    providerEmail: "info@happypaws.com",
+    price: 20,
+    rating: 4.6,
+    slotsAvailable: 6,
+    description:
+      "Keep your pets active and healthy indoors during winter with fun exercise sessions.",
+    image: "https://i.ibb.co.com/VpHPdNvR/unnamed.jpg",
+    category: "Activity",
+  },
+  {
+    serviceId: 6,
+    serviceName: "Winter Skin & Fur Hydration Treatment",
+    providerName: "FurCare Spa",
+    providerEmail: "services@furcare.com",
+    price: 35,
+    rating: 4.8,
+    slotsAvailable: 4,
+    description:
+      "Deep conditioning treatment for pets’ skin and fur to prevent dryness and irritation in winter.",
+    image: "https://i.ibb.co.com/cKd8hKRw/unnamed.jpg",
+    category: "Grooming",
   },
 ];
 
 const HeroSlider = () => {
   return (
-    <div className="relative w-full h-[450px] shadow-xl overflow-hidden group rounded-2xl container px-2 mx-auto">
+    <div className="w-full h-[520px] shadow-2xl overflow-hidden group rounded-3xl container px-2 mx-auto">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation={{
@@ -64,58 +109,74 @@ const HeroSlider = () => {
           disableOnInteraction: false,
         }}
         loop
-        className={`
-          h-full
-          [&_.swiper-pagination-bullet]:bg-white/60
-          [&_.swiper-pagination-bullet-active]:!bg-primary
-          [&_.swiper-pagination-bullet]:transition-all
-          [&_.swiper-pagination]:bottom-3
-        `}
+        className="h-full"
       >
         {heroSlides.map((slide) => (
-          <SwiperSlide key={slide.id}>
+          <SwiperSlide key={slide.serviceId}>
             <div
               className="w-full h-full bg-cover bg-center relative"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral/80 via-neutral/40 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
 
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-base-100 px-4 text-center">
-                <h2 className="text-3xl md:text-4xl font-extrabold mb-3 animate__animated animate__fadeInDown drop-shadow-md text-primary">
-                  {slide.title}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center space-y-3">
+                
+                {/* Category */}
+                <span className="bg-primary/90 text-white text-xs md:text-sm px-4 py-1 rounded-full uppercase tracking-wider shadow-md animate__animated animate__fadeInDown">
+                  {slide.category}
+                </span>
+
+                {/* Title */}
+                <h2 className="text-3xl md:text-5xl font-extrabold animate__animated animate__fadeInDown drop-shadow-lg text-secondary">
+                  {slide.serviceName}
                 </h2>
-                <p className="text-base md:text-lg mb-6 max-w-md animate__animated animate__fadeInUp animate__delay-1s drop-shadow-sm text-base-100">
-                  {slide.subtitle}
+
+                {/* Description */}
+                <p className="text-base md:text-lg max-w-xl animate__animated animate__fadeInUp animate__delay-1s text-gray-200">
+                  {slide.description}
                 </p>
-                <a
-                  href={slide.buttonLink}
-                  className="btn bg-secondary hover:bg-accent border-none text-base-100 text-sm md:text-base font-semibold 
-                             rounded-full px-6 py-2 shadow-md uppercase tracking-wider transform transition 
-                             hover:scale-105 animate__animated animate__zoomIn animate__delay-2s"
+
+                {/* Provider + Rating */}
+                <div className="flex flex-wrap gap-4 items-center justify-center text-sm md:text-base animate__animated animate__fadeInUp animate__delay-1s">
+                  <span className="bg-black/40 px-4 py-1 rounded-full">
+                    {slide.providerName}
+                  </span>
+                  <span className="flex items-center gap-1 bg-black/40 px-4 py-1 rounded-full">
+                    <FaStar className="text-yellow-400" />
+                    {slide.rating}
+                  </span>
+                  <span className="bg-black/40 px-4 py-1 rounded-full">
+                    ${slide.price}
+                  </span>
+                </div>
+
+                {/* Button */}
+                <Link
+                  to={`/service/${slide.serviceId}`}
+                  className="mt-4 btn bg-secondary hover:bg-primary border-none text-white text-sm md:text-base font-semibold 
+                  rounded-full px-8 py-3 shadow-lg uppercase tracking-wider transform transition 
+                  hover:scale-110 animate__animated animate__zoomIn animate__delay-2s"
                 >
-                  {slide.buttonText}
-                </a>
+                  View Details
+                </Link>
               </div>
             </div>
           </SwiperSlide>
         ))}
 
-        <div
-          className="swiper-button-prev-custom absolute top-1/2 -translate-y-1/2 left-3 z-10 
-                     p-2 md:p-3 rounded-full bg-secondary/30 text-base-100 cursor-pointer 
-                     hover:bg-secondary/50 transition-all duration-300 
-                     opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center shadow-md"
-        >
-          <FiChevronLeft size={22} />
+        {/* Custom Arrows */}
+        <div className="swiper-button-prev-custom absolute top-1/2 -translate-y-1/2 left-4 z-10 
+          p-3 rounded-full bg-black/40 text-white cursor-pointer 
+          hover:bg-primary transition-all duration-300 
+          opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center shadow-lg">
+          <FiChevronLeft size={26} />
         </div>
 
-        <div
-          className="swiper-button-next-custom absolute top-1/2 -translate-y-1/2 right-3 z-10 
-                     p-2 md:p-3 rounded-full bg-secondary/30 text-base-100 cursor-pointer 
-                     hover:bg-secondary/50 transition-all duration-300 
-                     opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center shadow-md"
-        >
-          <FiChevronRight size={22} />
+        <div className="swiper-button-next-custom absolute top-1/2 -translate-y-1/2 right-4 z-10 
+          p-3 rounded-full bg-black/40 text-white cursor-pointer 
+          hover:bg-primary transition-all duration-300 
+          opacity-0 group-hover:opacity-100 hidden md:flex items-center justify-center shadow-lg">
+          <FiChevronRight size={26} />
         </div>
       </Swiper>
     </div>
