@@ -68,7 +68,7 @@ const CareTipsContainer = () => {
             <img
               src={tip.image}
               alt={tip.title}
-              className="object-cover rounded-2xl w-full"
+              className="object-cover rounded-2xl h-72 w-full"
             />
           </div>
           <div className="p-4">

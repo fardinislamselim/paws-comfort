@@ -70,5 +70,30 @@
     "description": "Deep conditioning treatment for pets’ skin and fur to prevent dryness and irritation in winter.",
     "image": "https://i.ibb.co.com/cKd8hKRw/unnamed.jpg",
     "category": "Grooming"
+  },
+
+  {
+    "serviceId": 7,
+    "serviceName": "Winter Pet Health Checkup",
+    "providerName": "SafePaws Veterinary",
+    "providerEmail": "care@safepaws.com",
+    "price": 50,
+    "rating": 4.9,
+    "slotsAvailable": 8,
+    "description": "Complete winter health checkup including temperature, immunity screening, and basic lab tests.",
+    "image": "https://i.ibb.co.com/jvmrF30V/unnamed.jpg",
+    "category": "Health"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Winter Pet Training Program",
+    "providerName": "SmartPaws Training Center",
+    "providerEmail": "train@smartpaws.com",
+    "price": 45,
+    "rating": 4.7,
+    "slotsAvailable": 7,
+    "description": "Indoor winter training program to improve obedience, behavior, and confidence of pets.",
+    "image": "https://i.ibb.co.com/8Dtgs4FL/unnamed.jpg",
+    "category": "Training"
   }
 ]
