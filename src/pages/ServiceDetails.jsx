@@ -53,7 +53,7 @@ const ServiceDetails = () => {
         <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-3">
           {serviceName}
         </h2>
-        <p className="text-neutral text-lg max-w-2xl mx-auto">
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
           Discover everything you need to know about our{" "}
           <span className="text-secondary">{category}</span> — where care meets
           comfort for your furry friends.
@@ -80,7 +80,7 @@ const ServiceDetails = () => {
             </span>
           </div>
 
-          <h3 className="text-2xl font-bold text-neutral mt-2">
+          <h3 className="text-2xl font-bold text-gray-600 mt-2">
             Premium {serviceName}
           </h3>
 
@@ -97,7 +97,7 @@ const ServiceDetails = () => {
 
           <div className="divider my-4"></div>
 
-          <div className="space-y-2 text-sm text-neutral">
+          <div className="space-y-2 text-sm text-gray-600">
             <p className="flex items-center gap-2">
               <FiUser className="text-primary" />{" "}
               <strong>{providerName}</strong>
@@ -117,7 +117,7 @@ const ServiceDetails = () => {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-semibold text-neutral mb-1">
+                <label className="block text-sm font-semibold text-gray-600 mb-1">
                   Name
                 </label>
                 <input
@@ -132,7 +132,7 @@ const ServiceDetails = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-neutral mb-1">
+                <label className="block text-sm font-semibold text-gray-600 mb-1">
                   Email
                 </label>
                 <input

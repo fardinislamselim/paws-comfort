@@ -20,7 +20,6 @@ const MyProfile = () => {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-
     if (!user) return;
 
     const updatedName = name.trim() || user.displayName;
@@ -47,11 +46,10 @@ const MyProfile = () => {
   };
 
   return (
-    <section className="flex items-center justify-center bg-gray-50 dark:bg-gray-900 min-h-screen px-4 py-12">
+    <section className="flex items-center justify-center bg-white dark:bg-gray-900 min-h-screen px-4 py-12">
       <Toaster position="top-center" />
 
       <div className="bg-white dark:bg-gray-800 shadow-2xl rounded-3xl p-10 max-w-lg w-full text-center border border-gray-100 dark:border-gray-700">
-
         {!editing ? (
           <>
             {/* Avatar */}
@@ -77,7 +75,9 @@ const MyProfile = () => {
             {user?.metadata?.creationTime && (
               <p className="text-xs text-gray-500 mb-6">
                 Joined:{" "}
-                {new Date(user.metadata.creationTime).toLocaleDateString()}
+                {new Date(
+                  user.metadata.creationTime
+                ).toLocaleDateString()}
               </p>
             )}
 
@@ -111,7 +111,8 @@ const MyProfile = () => {
             {/* Photo URL */}
             <div className="flex flex-col text-left">
               <label className="font-semibold mb-2">
-                Photo URL <span className="text-xs text-gray-500">(Optional)</span>
+                Photo URL{" "}
+                <span className="text-xs text-gray-500">(Optional)</span>
               </label>
               <input
                 type="text"

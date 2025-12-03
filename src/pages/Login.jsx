@@ -71,7 +71,7 @@ const LoginPage = () => {
         </h2>
         <form onSubmit={handelLogin} className="space-y-4">
           <div className="flex flex-col">
-            <label htmlFor="email" className="text-neutral font-medium mb-1">
+            <label htmlFor="email" className="text-gray-600 font-medium mb-1">
               Email
             </label>
             <input
@@ -84,7 +84,7 @@ const LoginPage = () => {
             />
           </div>
           <div className="flex flex-col relative">
-            <label htmlFor="password" className="text-neutral font-medium mb-1">
+            <label htmlFor="password" className="text-gray-600 font-medium mb-1">
               Password
             </label>
             <input

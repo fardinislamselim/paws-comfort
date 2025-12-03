@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-base-100 text-neutral border-t border-base-300">
+    <footer className="bg-base-100 text-gray-600 border-t border-base-300">
       <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <Link to="/" className="flex items-center gap-2 mb-3">
@@ -14,7 +14,7 @@ const Footer = () => {
               Warm - Paws
             </h2>
           </Link>
-          <p className="text-sm text-neutral/70 font-body">
+          <p className="text-sm text-gray-600 font-body">
             A cozy winter companion platform designed to keep your pets warm,
             safe, and happy.
           </p>
@@ -48,7 +48,7 @@ const Footer = () => {
           <h3 className="text-lg font-heading font-semibold text-secondary mb-4">
             Contact Info
           </h3>
-          <ul className="space-y-2 font-body text-sm text-neutral/80">
+          <ul className="space-y-2 font-body text-sm text-gray-600">
             <li>📍 123 Cozy Street, Winter Town, Petland</li>
             <li>📞 +1 (800) 555-0199</li>
             <li>✉️ support@petcomfort.com</li>
@@ -60,22 +60,22 @@ const Footer = () => {
           <h3 className="text-lg font-heading font-semibold text-secondary mb-4">
             Useful Links
           </h3>
-          <ul className="space-y-2 font-body text-sm text-neutral/80">
+          <ul className="space-y-2 font-body text-sm text-gray-600">
             <li>
               <Link
-                to="/privacy-policy"
+                to="/services"
                 className="hover:text-primary transition"
               >
-                Privacy Policy
+                Our Services
               </Link>
             </li>
             <li>
-              <Link to="/terms" className="hover:text-primary transition">
-                Terms & Conditions
+              <Link to="/about-us" className="hover:text-primary transition">
+                About Us
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-primary transition">
+              <Link to="/contact-us" className="hover:text-primary transition">
                 Contact Us
               </Link>
             </li>
@@ -83,7 +83,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-base-300 text-center py-4 text-sm text-neutral/60 font-body bg-base-200">
+      <div className="border-t border-base-300 text-center py-4 text-sm text-gray-600 font-body bg-base-200">
         © {new Date().getFullYear()} Pet Comfort. All rights reserved.
       </div>
     </footer>

@@ -41,7 +41,7 @@ const ForgetPassword = () => {
         </h2>
         <form onSubmit={handleReset} className="space-y-4">
           <div className="flex flex-col">
-            <label htmlFor="email" className="text-neutral font-medium mb-1">
+            <label htmlFor="email" className="text-gray-600 font-medium mb-1">
               Email
             </label>
             <input

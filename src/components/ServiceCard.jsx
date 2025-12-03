@@ -30,12 +30,6 @@ const ServiceCard = ({ service }) => {
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/20"></div>
 
-          {/* Rating Badge */}
-          {/* <span className="absolute top-3 right-3 bg-secondary text-white px-3 py-1 
-          rounded-full text-xs font-semibold flex items-center gap-1 shadow-md">
-            <FaStar className="text-yellow-300" />
-            {rating}
-          </span> */}
         </div>
       </div>
 
@@ -55,7 +49,7 @@ const ServiceCard = ({ service }) => {
           </h3>
 
           {/* Short Description */}
-          <p className="text-sm text-neutral/70 mb-4 line-clamp-2">
+          <p className="text-sm text-gray-600 mb-4 line-clamp-2">
             {description}
           </p>
 

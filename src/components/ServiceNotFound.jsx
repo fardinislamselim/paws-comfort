@@ -17,7 +17,7 @@ const ServiceNotFound = () => {
         <h2 className="text-3xl font-bold text-primary mb-2">
           Service Not Found
         </h2>
-        <p className="text-neutral text-base mb-6">
+        <p className="text-gray-600 text-base mb-6">
           Oops! The service you’re looking for doesn’t exist or may have been
           removed. Try exploring other services.
         </p>

@@ -84,7 +84,7 @@ const Signup = () => {
 
         <form onSubmit={handleSignup} className="space-y-4">
           <div className="flex flex-col">
-            <label className="text-neutral font-medium mb-1">Name</label>
+            <label className="text-gray-600 font-medium mb-1">Name</label>
             <input
               type="text"
               id="name"
@@ -96,7 +96,7 @@ const Signup = () => {
           </div>
 
           <div className="flex flex-col">
-            <label className="text-neutral font-medium mb-1">Email</label>
+            <label className="text-gray-600 font-medium mb-1">Email</label>
             <input
               type="email"
               id="email"
@@ -108,7 +108,7 @@ const Signup = () => {
           </div>
 
           <div className="flex flex-col">
-            <label className="text-neutral font-medium mb-1">Photo URL</label>
+            <label className="text-gray-600 font-medium mb-1">Photo URL</label>
             <input
               type="text"
               id="photo"
@@ -119,7 +119,7 @@ const Signup = () => {
           </div>
 
           <div className="flex flex-col relative">
-            <label className="text-neutral font-medium mb-1">Password</label>
+            <label className="text-gray-600 font-medium mb-1">Password</label>
             <input
               type={showPassword ? "text" : "password"}
               id="password"

@@ -75,7 +75,7 @@ const CareTipsContainer = () => {
             <h3 className="text-lg font-semibold text-secondary mb-2">
               {tip.title}
             </h3>
-            <p className="text-neutral text-sm">{tip.description}</p>
+            <p className="text-gray-600 text-sm">{tip.description}</p>
           </div>
         </div>
       ))}

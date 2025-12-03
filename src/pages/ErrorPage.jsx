@@ -21,7 +21,7 @@ const ErrorPage = () => {
           <h1 className="text-[120px] md:text-[150px] font-extrabold text-primary leading-none">
             404
           </h1>
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-600">
             Oops! Nothing Was Found
           </h2>
           <p className="text-gray-500 max-w-md mx-auto lg:mx-0">
