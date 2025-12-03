@@ -10,6 +10,7 @@ import MyProfile from "../pages/MyProfile";
 import ForgetPassword from "../pages/ForgetPassword";
 import Loading from "../components/Loading";
 import Services from "../pages/Services";
+import Contact from "../pages/Countact";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
         loader: () => fetch("/data.json"),
         hydrateFallbackElement: <Loading />,
       },
+      { path: "/contact-us", Component: Contact },
       { path: "/login", Component: Login },
       { path: "/signup", Component: Signup },
       { path: "*", Component: ErrorPage },

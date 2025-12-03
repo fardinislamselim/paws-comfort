@@ -138,12 +138,12 @@ const Navbar = () => {
                 </button>
               </>
             ) : (
-              <NavLink
+              <Link
                 to="/login"
                 className="btn btn-warning text-primary font-heading text-lg rounded-full px-6 shadow hover:scale-105 transition-all"
               >
                 Login
-              </NavLink>
+              </Link>
             )}
             {!user && (
               <div className="hidden lg:block">
